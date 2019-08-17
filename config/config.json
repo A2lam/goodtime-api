@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "goodtime",
+    "password": "goodtime_pass",
+    "database": "goodtime",
+    "host": "db",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "goodtime",
+    "password": "goodtime_pass",
+    "database": "goodtime",
+    "host": "db",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "goodtime",
+    "password": "goodtime_pass",
+    "database": "goodtime",
+    "host": "db",
+    "dialect": "mysql"
+  }
+}
