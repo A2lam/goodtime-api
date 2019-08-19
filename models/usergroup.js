@@ -6,13 +6,13 @@ module.exports = (sequelize, DataTypes) => {
     created_at: DataTypes.DATE,
     updated_by: DataTypes.INTEGER,
     updated_at: DataTypes.DATE,
-    isActive: DataTypes.TINYINT,
+    is_active: DataTypes.TINYINT,
   }, {});
   UserGroup.associate = function(models) {
-    UserGroup.belongsTo(models.User, {
+    UserGroup.belongsTo(models.user, {
       foreignKey: 'user_id',
     });
-    UserGroup.belongsTo(models.Group, {
+    UserGroup.belongsTo(models.group, {
       foreignKey: 'groups_id',
     });
   };

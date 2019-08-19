@@ -1,4 +1,3 @@
-
 import { Router } from 'express';
 import jwt from 'jsonwebtoken';
 import passport from 'passport';
@@ -11,7 +10,7 @@ router.post('/login', (req, res, next) => {
     console.log(err);
     if (err || !user) {
       return res.status(400).json({
-        message: 'Incorrect login or password !',
+        message: 'Nom d\'utilisateur ou Mot de passe incorrecte !',
         user,
       });
     }

@@ -17,7 +17,7 @@ passport.use(new LocalStrategy({
     passwordField: 'password',
   },
   ((login, password, done) => {
-    return models.User.findOne({
+    return models.user.findOne({
       where: {
         username: login,
         password: md5(password),
@@ -42,7 +42,7 @@ passport.use(new LocalStrategy({
 passport.use(new JWTStrategy(
   opts,
   ((jwtPayload, done) => {
-    return models.User.findOne({
+    return models.user.findOne({
       where: {
         username: jwtPayload.username
       }
