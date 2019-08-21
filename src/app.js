@@ -1,12 +1,12 @@
 import express from 'express';
-import http from 'http';
-
 import passort from 'passport';
 import bodyParser from 'body-parser';
 import passport from 'passport/lib';
+import http from 'http';
 import cors from 'cors';
 
 import authRouter from './auth/auth';
+import userRouter from './user';
 
 require('./auth/passport');
 
@@ -42,6 +42,8 @@ app.get('/', (req, res) => {
 
 // Login et logout
 app.use('/api/user', authRouter);
+// Users
+app.use('/users', passport.authenticate('jwt'), userRouter);
 
 const server = http.createServer(app);
 

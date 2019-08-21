@@ -10,6 +10,7 @@ export default function (req, res, next) {
     email: req.body.email,
     password: md5(req.body.password),
     user_types_id: req.body.user_types_id,
+    pictures_id: req.body.pictures_id,
     created_by: req.body.created_by,
     // created_at:
     is_active: 1
