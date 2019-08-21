@@ -7,7 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     updated_by: DataTypes.INTEGER,
     updated_at: DataTypes.DATE,
     is_active: DataTypes.TINYINT,
-  }, {});
+  }, {
+    timestamps: false
+  });
   Group.associate = function(models) {
     // associations can be defined here
   };

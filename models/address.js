@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
     city: DataTypes.STRING,
     latitude: DataTypes.DECIMAL,
     longitude: DataTypes.DECIMAL
-  }, {});
+  }, {
+    timestamps: false
+  });
   Address.associate = function(models) {
     // associations can be defined here
   };

@@ -1,3 +1,4 @@
+import passport from 'passport';
 import { Router } from 'express';
 
 import getUsers from './services/find';
@@ -9,12 +10,12 @@ import deleteUser from './services/delete';
 const router = Router();
 
 // Users
-router.get('/', getUsers);
+router.get('/', passport.authenticate('jwt'), getUsers);
 
 // User
-router.get('/:id', getUser);
+router.get('/:id', passport.authenticate('jwt'), getUser);
 router.post('/', createUser);
-router.put('/:id', updateUser);
-router.delete('/:id', deleteUser);
+router.put('/:id', passport.authenticate('jwt'), updateUser);
+router.delete('/:id', passport.authenticate('jwt'), deleteUser);
 
 export default router;

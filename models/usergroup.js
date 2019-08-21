@@ -7,7 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     updated_by: DataTypes.INTEGER,
     updated_at: DataTypes.DATE,
     is_active: DataTypes.TINYINT,
-  }, {});
+  }, {
+    timestamps: false
+  });
   UserGroup.associate = function(models) {
     UserGroup.belongsTo(models.user, {
       foreignKey: 'user_id',

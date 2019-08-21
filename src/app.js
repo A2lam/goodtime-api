@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 // Login et logout
 app.use('/api/user', authRouter);
 // Users
-app.use('/users', passport.authenticate('jwt'), userRouter);
+app.use('/users', userRouter);
 
 const server = http.createServer(app);
 
