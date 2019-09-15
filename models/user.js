@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('users', {
+  const User = sequelize.define('user', {
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     phone: DataTypes.STRING,
@@ -15,16 +15,15 @@ module.exports = (sequelize, DataTypes) => {
     created_at: DataTypes.DATE,
     updated_by: DataTypes.INTEGER,
     updated_at: DataTypes.DATE,
-    isActive: DataTypes.TINYINT,
-  }, {});
+    is_active: DataTypes.TINYINT,
+  }, {
+    timestamps: false
+  });
   User.associate = function(models) {
-    User.belongsTo(models.UserType, {
-      foreignKey: 'user_type_id',
+    User.belongsTo(models.user_type, {
+      foreignKey: 'user_types_id',
     });
-    User.belongsTo(models.Address, {
-      foreignKey: 'addresses_id',
-    });
-    User.belongsTo(models.Picture, {
+    User.belongsTo(models.picture, {
       foreignKey: 'pictures_id',
     });
   };
