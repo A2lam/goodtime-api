@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Bar = sequelize.define('bar_picture', {
+  const BarPicture = sequelize.define('bar_picture', {
     is_main: DataTypes.TINYINT,
     created_by: DataTypes.INTEGER,
     created_at: DataTypes.DATE,
@@ -10,12 +10,13 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false
   });
-  Bar.associate = function(models) {
-    Bar.belongsTo(models.bar, {
+  BarPicture.associate = function(models) {
+    BarPicture.belongsTo(models.bar, {
       foreignKey: 'bars_id',
     });
-    Bar.belongsTo(models.picture, {
+    BarPicture.belongsTo(models.picture, {
       foreignKey: 'pictures_id',
     });
   };
+  return BarPicture;
 };
