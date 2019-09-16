@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const UserGoodTime = sequelize.define('good_time', {
+  const UserGoodTime = sequelize.define('user_good_time', {
     status: DataTypes.STRING,
     is_sam: DataTypes.TINYINT,
     created_by: DataTypes.INTEGER,

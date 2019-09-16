@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Event = sequelize.define('rating', {
+  const Event = sequelize.define('event', {
     name: DataTypes.STRING,
     description: DataTypes.TEXT,
     date: DataTypes.DATE,
