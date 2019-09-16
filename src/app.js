@@ -7,6 +7,8 @@ import cors from 'cors';
 
 import authRouter from './auth/auth';
 import userRouter from './user';
+import barRouter from './bar';
+import eventRouter from './event'
 
 require('./auth/passport');
 
@@ -44,6 +46,10 @@ app.get('/', (req, res) => {
 app.use('/api/user', authRouter);
 // Users
 app.use('/users', userRouter);
+// Bars
+app.use('/bars', barRouter);
+// Events
+app.use('/events', eventRouter);
 
 const server = http.createServer(app);
 
