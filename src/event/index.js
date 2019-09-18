@@ -12,7 +12,7 @@ const router = Router();
 
 // Events
 router.get('/', passport.authenticate('jwt'), getEvents);
-router.get('/bar/:bars_id', passport.authenticate('jwt'), getEventsByBar());
+router.get('/bar/:bars_id', passport.authenticate('jwt'), getEventsByBar);
 
 // Event
 router.get('/:id', passport.authenticate('jwt'), getEvent);
