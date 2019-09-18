@@ -8,7 +8,8 @@ import cors from 'cors';
 import authRouter from './auth/auth';
 import userRouter from './user';
 import barRouter from './bar';
-import eventRouter from './event'
+import eventRouter from './event';
+import fileRouter from './file';
 
 require('./auth/passport');
 
@@ -50,6 +51,8 @@ app.use('/users', userRouter);
 app.use('/bars', barRouter);
 // Events
 app.use('/events', eventRouter);
+// File
+app.use('/file', fileRouter);
 
 const server = http.createServer(app);
 
