@@ -1,15 +1,14 @@
 import models from '../../../models';
 
 export default function (req, res, next) {
-  return models.bar
+  return models.rating
     .findOne({
       where: { id: req.params.id },
       include : [
-        { model: models.address },
         { model: models.user },
       ]
-    }).then(bar => {
-      res.send(bar);
+    }).then(rating => {
+      res.send(rating);
     }).catch(err => {
       next(err);
     });
