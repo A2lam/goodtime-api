@@ -9,7 +9,7 @@ import deleteBarPicture from './services/delete';
 const router = Router();
 
 // BarPictures
-router.get('/', getBarPictures);
+router.get('/:bars_id', getBarPictures);
 
 // BarPicture
 router.get('/:id', getBarPicture);
