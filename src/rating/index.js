@@ -9,7 +9,7 @@ import deleteRating from './services/delete';
 const router = Router();
 
 // Ratings
-router.get('/', passport.authenticate('jwt'), getRatings);
+router.get('/:bars_id', passport.authenticate('jwt'), getRatings);
 
 // Rating
 router.get('/:id', passport.authenticate('jwt'), getRating);
