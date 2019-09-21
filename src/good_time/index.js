@@ -9,7 +9,7 @@ import deleteGoodTime from './services/delete';
 const router = Router();
 
 // GoodTimes
-router.get('/:users_id', passport.authenticate('jwt'), getGoodTimes);
+router.get('/', passport.authenticate('jwt'), getGoodTimes);
 
 // GoodTime
 router.get('/:id', passport.authenticate('jwt'), getGoodTime);
