@@ -13,6 +13,7 @@ import fileRouter from './file';
 import favoriteBarRouter from './favorite_bar';
 import barPictureRouter from './bar_picture';
 import groupRouter from './group';
+import ratingRouter from './rating';
 
 require('./auth/passport');
 
@@ -62,6 +63,8 @@ app.use('/favorite_bars', favoriteBarRouter);
 app.use('/bar_pictures', barPictureRouter);
 // Groups
 app.use('/groups', groupRouter);
+// Ratings
+app.use('/ratings', ratingRouter);
 
 const server = http.createServer(app);
 
