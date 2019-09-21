@@ -13,7 +13,7 @@ const router = Router();
 router.get('/', passport.authenticate('jwt'), getSchedules);
 
 // Schedule
-router.get('/:id', passport.authenticate('jwt'), getSchedule);
+router.get('/:bars_id', passport.authenticate('jwt'), getSchedule);
 router.post('/', passport.authenticate('jwt'), createSchedule);
 router.put('/:id', passport.authenticate('jwt'), updateSchedule);
 router.delete('/:id', passport.authenticate('jwt'), deleteSchedule);
