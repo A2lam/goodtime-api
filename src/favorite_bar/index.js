@@ -8,7 +8,7 @@ import deleteFavoriteBar from './services/delete';
 const router = Router();
 
 // FavoriteBars
-router.get('/:user_id', passport.authenticate('jwt'), getFavoriteBars);
+router.get('/:users_id', passport.authenticate('jwt'), getFavoriteBars);
 
 // FavoriteBar
 router.post('/', createFavoriteBar);
