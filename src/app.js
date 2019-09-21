@@ -12,6 +12,7 @@ import eventRouter from './event';
 import fileRouter from './file';
 import favoriteBarRouter from './favorite_bar';
 import barPictureRouter from './bar_picture';
+import groupRouter from './group';
 
 require('./auth/passport');
 
@@ -59,6 +60,8 @@ app.use('/files', fileRouter);
 app.use('/favorite_bars', favoriteBarRouter);
 // BarPictures
 app.use('/bar_pictures', barPictureRouter);
+// Groups
+app.use('/groups', groupRouter);
 
 const server = http.createServer(app);
 
