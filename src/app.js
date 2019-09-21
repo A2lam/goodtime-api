@@ -15,6 +15,7 @@ import barPictureRouter from './bar_picture';
 import groupRouter from './group';
 import ratingRouter from './rating';
 import goodTimeRouter from './good_time';
+import scheduleRouter from './schedule';
 
 require('./auth/passport');
 
@@ -68,6 +69,8 @@ app.use('/groups', groupRouter);
 app.use('/ratings', ratingRouter);
 // GoodTimes
 app.use('/good_times', goodTimeRouter);
+// Schedules
+app.use('/schedules', scheduleRouter);
 
 const server = http.createServer(app);
 
