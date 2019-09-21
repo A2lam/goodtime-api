@@ -10,6 +10,7 @@ import userRouter from './user';
 import barRouter from './bar';
 import eventRouter from './event';
 import fileRouter from './file';
+import favoriteBarRouter from './favorite_bar';
 
 require('./auth/passport');
 
@@ -51,8 +52,10 @@ app.use('/users', userRouter);
 app.use('/bars', barRouter);
 // Events
 app.use('/events', eventRouter);
-// File
-app.use('/file', fileRouter);
+// Files
+app.use('/files', fileRouter);
+// FavoriteBars
+app.use('/favorite_bars', favoriteBarRouter);
 
 const server = http.createServer(app);
 
