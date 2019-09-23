@@ -19,6 +19,7 @@ import scheduleRouter from './schedule';
 import menuRouter from './menu';
 import itemRouter from './item';
 import menuItemRouter from './menu_item';
+import discountRouter from './discount';
 
 require('./auth/passport');
 
@@ -78,8 +79,8 @@ app.use('/schedules', scheduleRouter);
 app.use('/menus', menuRouter);
 // Items
 app.use('/items', itemRouter);
-// MenuItems
-app.use('/menu_items', itemRouter);
+// Discounts
+app.use('/discounts', discountRouter);
 
 const server = http.createServer(app);
 
