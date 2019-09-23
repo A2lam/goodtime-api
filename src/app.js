@@ -17,6 +17,7 @@ import ratingRouter from './rating';
 import goodTimeRouter from './good_time';
 import scheduleRouter from './schedule';
 import menuRouter from './menu';
+import itemRouter from './item';
 
 require('./auth/passport');
 
@@ -74,6 +75,8 @@ app.use('/good_times', goodTimeRouter);
 app.use('/schedules', scheduleRouter);
 // Menus
 app.use('/menus', menuRouter);
+// Items
+app.use('/items', itemRouter);
 
 const server = http.createServer(app);
 
