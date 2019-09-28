@@ -18,7 +18,7 @@ export default function (req, res, next) {
       return models.bar.create({
         name: req.body.name,
         addresses_id: address.id,
-        owned_id: user.id,
+        users_id: user.id,
         phone: req.body.phone,
         type: req.body.type,
         created_by: user.id,
