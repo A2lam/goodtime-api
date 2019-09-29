@@ -14,7 +14,7 @@ router.get('/', passport.authenticate('jwt'), getBars);
 
 // Bar
 router.get('/:id', passport.authenticate('jwt'), getBar);
-router.post('/', createBar);
+router.post('/', passport.authenticate('jwt'), createBar);
 router.put('/:id', passport.authenticate('jwt'), updateBar);
 router.delete('/:id', passport.authenticate('jwt'), deleteBar);
 
