@@ -2,6 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Bar = sequelize.define('bar', {
     name: DataTypes.STRING,
+    description: DataTypes.TEXT,
     phone: DataTypes.STRING,
     type: DataTypes.STRING,
     created_by: DataTypes.INTEGER,

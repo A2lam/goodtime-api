@@ -21,6 +21,7 @@ export default function (req, res, next) {
     }).then(address => {
       return models.bar.update({
         name: req.body.name,
+        description: req.body.description,
         addresses_id: address.id,
         users_id: user.id,
         phone: req.body.phone,
