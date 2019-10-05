@@ -9,6 +9,7 @@ export default function (req, res, next) {
     return models.good_time.create({
       groups_id: req.body.groups_id,
       bars_id: req.body.bars_id,
+      date: req.body.date,
       is_booking: req.body.is_booking,
       number_of_participants: req.body.number_of_participants,
       status: req.body.status,
