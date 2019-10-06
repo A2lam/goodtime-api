@@ -229,7 +229,7 @@ CREATE TABLE IF NOT EXISTS `goodtime`.`good_times` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `groups_id` INT NULL,
   `bars_id` INT NOT NULL,
-  `date` DATE NOT NULL,
+  `date` DATETIME NOT NULL,
   `is_booking` TINYINT NULL DEFAULT 0,
   `number_of_participants` INT NULL,
   `status` VARCHAR(3) NOT NULL,

@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const GoodTime = sequelize.define('good_time', {
-    date: DataTypes.DATE,
+    date: DataTypes.DATETIME,
     is_booking: DataTypes.TINYINT,
     number_of_participants: DataTypes.INTEGER,
     status: DataTypes.STRING,
