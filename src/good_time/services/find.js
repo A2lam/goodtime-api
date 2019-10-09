@@ -8,6 +8,7 @@ export default function (req, res, next) {
         is_active: 1
       },
       include: [
+        { model: models.bar },
         { model: models.group },
       ]
     })
