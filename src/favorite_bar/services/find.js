@@ -4,7 +4,7 @@ export default function (req, res, next) {
   return models.favorite_bar
     .findAll({
       where: {
-        users_id: req.params.users_id,
+        users_id: req.user.id,
         is_active: 1
       },
       include: [
