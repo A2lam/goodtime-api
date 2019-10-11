@@ -6,7 +6,7 @@ export default function (req, res, next) {
       id: req.user.id
     }
   }).then(user => {
-    return models.Menu.update({
+    return models.user.update({
       updated_by: user.id,
       is_active: 0
     }, {
