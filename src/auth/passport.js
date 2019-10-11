@@ -21,6 +21,7 @@ passport.use(new LocalStrategy({
       where: {
         username: login,
         password: md5(password),
+        is_active: 1,
       }
     }).then((user) => {
       if (!user) {
